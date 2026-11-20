@@ -1,0 +1,74 @@
+﻿---
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#home" aria-label="aDehghan home">
+      <span class="brand-mark">a<span>.</span></span>
+      <span class="brand-name">DEHGHAN</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {links.map((link) => (
+        <a class="nav-link" href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+
+    <a class="header-cta" href="mailto:hello@adehghan.ir">
+      Let's talk <span aria-hidden="true">↗</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+    {links.map((link) => (
+      <a class="mobile-nav-link" href={link.href}>{link.label}</a>
+    ))}
+    <a class="mobile-nav-contact" href="mailto:hello@adehghan.ir">Let's talk ↗</a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const mobileNav = document.querySelector<HTMLElement>(".mobile-nav");
+
+  if (toggle && mobileNav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      toggle.setAttribute(
+        "aria-label",
+        isOpen ? "Open navigation menu" : "Close navigation menu"
+      );
+
+      mobileNav.hidden = isOpen;
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+        mobileNav.hidden = true;
+        document.body.classList.remove("menu-open");
+      });
+    });
+  }
+</script>
