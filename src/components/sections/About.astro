@@ -267,4 +267,69 @@
       transition: none;
     }
   }
+
+  /* Light theme overrides — About section */
+  :global(:root[data-theme="light"]) .about-section {
+    background:
+      radial-gradient(ellipse at 12% 45%, rgba(139,92,246,.07), transparent 38%),
+      #f7f7fb;
+    border-top-color: rgba(24,24,33,.09);
+  }
+
+  :global(:root[data-theme="light"]) .about-kicker {
+    color: #666675;
+  }
+
+  :global(:root[data-theme="light"]) .about-heading h2 {
+    color: #181821;
+  }
+
+  :global(:root[data-theme="light"]) .about-heading h2 span {
+    color: #7950c8;
+  }
+
+  :global(:root[data-theme="light"]) .about-lead {
+    color: #292938;
+  }
+
+  :global(:root[data-theme="light"]) .about-description {
+    color: #626272;
+  }
+
+  :global(:root[data-theme="light"]) .about-link {
+    color: #7044c5;
+  }
+
+  :global(:root[data-theme="light"]) .about-link:hover {
+    color: #4f2a9c;
+  }
+
+  :global(:root[data-theme="light"]) .focus-card {
+    border-color: rgba(24,24,33,.10);
+    background: linear-gradient(120deg, #fff, #f0eff7);
+    box-shadow: 0 8px 28px rgba(30,25,60,.035);
+  }
+
+  :global(:root[data-theme="light"]) .focus-card:hover {
+    border-color: rgba(139,92,246,.35);
+    background: #f4f0ff;
+  }
+
+  :global(:root[data-theme="light"]) .focus-card h3 {
+    color: #222230;
+  }
+
+  :global(:root[data-theme="light"]) .focus-card p {
+    color: #626272;
+  }
+
+  :global(:root[data-theme="light"]) .focus-number,
+  :global(:root[data-theme="light"]) .focus-symbol {
+    color: #7950c8;
+  }
+
+  :global(:root[data-theme="light"]) .about-footer {
+    color: #686878;
+  }
 </style>
+
