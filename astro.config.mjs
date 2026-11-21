@@ -8,6 +8,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://n4choir.github.io',
   base: '/aDehghan',
+  trailingSlash: 'always',
 
   integrations: [
     react(),
@@ -22,3 +23,4 @@ export default defineConfig({
     plugins: [tailwindcss()]
   }
 });
+
