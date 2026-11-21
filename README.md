@@ -1,43 +1,111 @@
-# Astro Starter Kit: Minimal
+# aDehghan — Personal Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A modern, responsive personal portfolio built with **Astro**, showcasing my projects, skills, and journey as a developer.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🌐 **Live Website:** [n4choir.github.io/aDehghan](https://n4choir.github.io/aDehghan/)
 
-## 🚀 Project Structure
+## ✨ Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Modern dark-first design
+- Responsive layout for desktop, tablet, and mobile
+- English and Persian language support
+- RTL support for Persian
+- Dark and light theme toggle
+- Animated and interactive sections
+- Dedicated sections for About, Skills, Projects, and Contact
+- SEO metadata and Open Graph support
+- Custom 404 page
+- GitHub Pages deployment with GitHub Actions
+
+## 🛠️ Tech Stack
+
+- [Astro](https://astro.build/)
+- HTML5
+- CSS3
+- JavaScript
+- [GSAP](https://gsap.com/)
+- [Lucide](https://lucide.dev/)
+
+## 📂 Project Structure
 
 ```text
-/
+aDehghan/
 ├── public/
+│   ├── favicon.svg
+│   └── og-image.png
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/
+│   │   ├── layout/
+│   │   └── sections/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── astro.config.mjs
+├── package.json
+└── README.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚀 Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js
+- npm
 
-## 🧞 Commands
+### Installation
 
-All commands are run from the root of the project, from a terminal:
+Clone the repository:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+git clone https://github.com/N4choiR/aDehghan.git
+```
 
-## 👀 Want to learn more?
+Navigate to the project directory:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+cd aDehghan
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:4321` in your browser.
+
+## 📦 Available Commands
+
+| Command | Description |
+|---|---|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production website |
+| `npm run preview` | Preview the production build |
+| `npm run astro` | Run Astro CLI commands |
+
+## 🌍 Deployment
+
+This project is deployed using **GitHub Pages** and **GitHub Actions**.
+
+Every push to the `main` branch triggers the deployment workflow.
+
+## 📬 Contact
+
+- **GitHub:** [@N4choiR](https://github.com/N4choiR)
+- **Website:** [adehghan.ir](https://adehghan.ir)
+- **Email:** hello@adehghan.ir
+- **Telegram:** [@Nacho1R](https://t.me/Nacho1R)
+
+---
+
+Made with curiosity by **aDehghan**.
