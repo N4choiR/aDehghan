@@ -1,0 +1,248 @@
+﻿---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="404 — Page Not Found | aDehghan" description="The page you're looking for could not be found.">
+  <main class="error-page">
+    <div class="error-glow error-glow-one"></div>
+    <div class="error-glow error-glow-two"></div>
+
+    <div class="error-content">
+      <div class="error-code">
+        <span>4</span>
+        <span class="error-zero">0</span>
+        <span>4</span>
+      </div>
+
+      <div class="error-label">
+        <span class="status-dot"></span>
+        ERROR 404
+      </div>
+
+      <h1>Lost in the digital space?</h1>
+
+      <p>
+        Looks like this page took a different path.
+        Don't worry, there's still plenty to explore.
+      </p>
+
+      <div class="error-actions">
+        <a class="home-button" href={import.meta.env.BASE_URL}>
+          <span>Back to homepage</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a class="github-link" href="https://github.com/N4choiR" target="_blank" rel="noopener noreferrer">
+          Explore GitHub
+        </a>
+      </div>
+
+      <div class="error-footer">
+        <span>a<span class="footer-dot">.</span> DEHGHAN</span>
+        <span>ALWAYS BUILDING</span>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .error-page {
+      min-height: calc(100vh - 80px);
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 80px 24px;
+      isolation: isolate;
+    }
+
+    .error-content {
+      width: min(100%, 680px);
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      animation: error-appear 0.8s ease both;
+    }
+
+    .error-code {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: clamp(110px, 23vw, 210px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.09em;
+      color: var(--text-primary);
+      opacity: 0.95;
+      margin-top: 150px;
+    }
+
+    .error-zero {
+      color: transparent;
+      -webkit-text-stroke: 3px var(--primary);
+      filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.3));
+    }
+
+    .error-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 28px;
+      padding: 8px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 12px var(--primary);
+    }
+
+    .error-content h1 {
+      margin: 26px 0 12px;
+      color: var(--text-primary);
+      font-size: clamp(27px, 5vw, 42px);
+      font-weight: 750;
+      letter-spacing: -0.045em;
+    }
+
+    .error-content p {
+      max-width: 440px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .error-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .home-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(139, 92, 246, 0.3);
+    }
+
+    .github-link {
+      padding: 14px 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .github-link:hover {
+      border-color: var(--primary);
+      background: var(--surface);
+    }
+
+    .error-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-top: 90px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+    }
+
+    .footer-dot {
+      color: var(--primary);
+    }
+
+    .error-glow {
+      position: absolute;
+      z-index: -1;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(110px);
+      pointer-events: none;
+      opacity: 0.13;
+    }
+
+    .error-glow-one {
+      top: 5%;
+      left: 5%;
+      background: #8b5cf6;
+    }
+
+    .error-glow-two {
+      right: 0;
+      bottom: 0;
+      background: #38bdf8;
+    }
+
+    @keyframes error-appear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .error-page {
+        min-height: calc(100vh - 70px);
+        padding: 60px 20px;
+      }
+
+      .error-content p {
+        font-size: 14px;
+      }
+
+      .error-footer {
+        margin-top: 65px;
+        font-size: 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .error-content {
+        animation: none;
+      }
+
+      .home-button,
+      .github-link {
+        transition: none;
+      }
+    }
+  </style>
+</MainLayout>
+
