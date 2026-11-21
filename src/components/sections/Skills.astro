@@ -1,0 +1,366 @@
+﻿<section class="skills-section" id="skills">
+  <div class="skills-container">
+    <div class="skills-heading">
+      <span class="skills-kicker"><span></span> WHAT I WORK WITH</span>
+      <div class="skills-heading-row">
+        <h2>Tools behind<br /><span>the ideas.</span></h2>
+        <p>
+          A growing toolkit shaped by building real projects,
+          solving practical problems, and exploring new technologies.
+        </p>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <div class="skill-card-top">
+          <span class="skill-number">01 / FRONTEND</span>
+          <span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span>
+        </div>
+        <h3>Frontend Development</h3>
+        <p>Building responsive interfaces and polished experiences for the web.</p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>Astro</span>
+          <span>Tailwind CSS</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-card-top">
+          <span class="skill-number">02 / BACKEND</span>
+          <span class="skill-symbol" aria-hidden="true">{ }</span>
+        </div>
+        <h3>Backend Development</h3>
+        <p>Developing application logic, APIs, and server-side functionality.</p>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>PHP</span>
+          <span>Node.js</span>
+          <span>NestJS</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-card-top">
+          <span class="skill-number">03 / DATA</span>
+          <span class="skill-symbol" aria-hidden="true">◫</span>
+        </div>
+        <h3>Databases & Data</h3>
+        <p>Working with structured data, database models, and data access tools.</p>
+        <div class="skill-tags">
+          <span>PostgreSQL</span>
+          <span>Prisma</span>
+          <span>SQLAlchemy</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-card-top">
+          <span class="skill-number">04 / WORKFLOW</span>
+          <span class="skill-symbol" aria-hidden="true">⌘</span>
+        </div>
+        <h3>Tools & Workflow</h3>
+        <p>Tools that support development, collaboration, and modern workflows.</p>
+        <div class="skill-tags">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Docker</span>
+          <span>Vite</span>
+          <span>GSAP</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="skills-footer">
+      <span>BUILT THROUGH PRACTICE</span>
+      <span class="skills-footer-line"></span>
+      <span>ALWAYS LEARNING</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    position: relative;
+    padding: 125px 24px 100px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,.055);
+    background:
+      radial-gradient(ellipse at 88% 35%, rgba(56,189,248,.045), transparent 34%),
+      #08090d;
+  }
+
+  .skills-container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .skills-heading {
+    margin-bottom: 55px;
+  }
+
+  .skills-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #a1a1aa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .2em;
+  }
+
+  .skills-kicker > span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 14px rgba(56,189,248,.7);
+  }
+
+  .skills-heading-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 22px;
+  }
+
+  .skills-heading h2 {
+    margin: 0;
+    color: #f4f4f5;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -.06em;
+    font-weight: 700;
+  }
+
+  .skills-heading h2 span {
+    color: #a78bfa;
+  }
+
+  .skills-heading-row > p {
+    max-width: 350px;
+    margin: 0 0 7px;
+    color: #92929e;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .skill-card {
+    position: relative;
+    min-height: 250px;
+    padding: 27px 28px 25px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+    transition: transform .25s ease, border-color .25s ease, background .25s ease;
+  }
+
+  .skill-card::before {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 46px;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #38bdf8);
+    content: "";
+    opacity: .8;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(167,139,250,.3);
+    background: linear-gradient(135deg, rgba(139,92,246,.075), rgba(255,255,255,.015));
+  }
+
+  .skill-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .skill-number {
+    color: #858592;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+
+  .skill-symbol {
+    color: #a78bfa;
+    font-size: 23px;
+    font-weight: 500;
+    opacity: .9;
+  }
+
+  .skill-card h3 {
+    margin: 0 0 9px;
+    color: #ededf0;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.035em;
+  }
+
+  .skill-card > p {
+    max-width: 390px;
+    margin: 0;
+    color: #92929e;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .skill-tags span {
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 6px;
+    background: rgba(255,255,255,.025);
+    color: #c7c4d1;
+    font-size: 10px;
+    font-weight: 500;
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
+  }
+
+  .skill-card:hover .skill-tags span {
+    border-color: rgba(167,139,250,.17);
+  }
+
+  .skills-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 65px;
+    color: #666674;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .2em;
+  }
+
+  .skills-footer-line {
+    width: 54px;
+    height: 1px;
+    background: linear-gradient(90deg, #38bdf8, transparent);
+  }
+
+  /* Light theme */
+  :global(:root[data-theme="light"]) .skills-section {
+    border-top-color: rgba(24,24,33,.09);
+    background:
+      radial-gradient(ellipse at 88% 35%, rgba(56,189,248,.055), transparent 34%),
+      #f7f7fb;
+  }
+
+  :global(:root[data-theme="light"]) .skills-kicker,
+  :global(:root[data-theme="light"]) .skill-number {
+    color: #666675;
+  }
+
+  :global(:root[data-theme="light"]) .skills-heading h2 {
+    color: #181821;
+  }
+
+  :global(:root[data-theme="light"]) .skills-heading h2 span {
+    color: #7950c8;
+  }
+
+  :global(:root[data-theme="light"]) .skills-heading-row > p,
+  :global(:root[data-theme="light"]) .skill-card > p {
+    color: #626272;
+  }
+
+  :global(:root[data-theme="light"]) .skill-card {
+    border-color: rgba(24,24,33,.10);
+    background: linear-gradient(135deg, #fff, #f0eff7);
+    box-shadow: 0 8px 28px rgba(30,25,60,.025);
+  }
+
+  :global(:root[data-theme="light"]) .skill-card:hover {
+    border-color: rgba(139,92,246,.35);
+    background: #f4f0ff;
+  }
+
+  :global(:root[data-theme="light"]) .skill-card h3 {
+    color: #222230;
+  }
+
+  :global(:root[data-theme="light"]) .skill-tags span {
+    border-color: rgba(24,24,33,.09);
+    background: rgba(255,255,255,.65);
+    color: #454554;
+  }
+
+  :global(:root[data-theme="light"]) .skill-card:hover .skill-tags span {
+    border-color: rgba(139,92,246,.22);
+  }
+
+  :global(:root[data-theme="light"]) .skill-symbol {
+    color: #7950c8;
+  }
+
+  :global(:root[data-theme="light"]) .skills-footer {
+    color: #686878;
+  }
+
+  @media (max-width: 760px) {
+    .skills-section {
+      padding: 94px 20px 76px;
+    }
+
+    .skills-heading {
+      margin-bottom: 38px;
+    }
+
+    .skills-heading-row {
+      align-items: start;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .skills-heading-row > p {
+      max-width: 500px;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .skill-card {
+      min-height: 0;
+      padding: 24px 22px;
+    }
+
+    .skills-footer {
+      margin-top: 48px;
+      gap: 12px;
+      font-size: 8px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skill-card,
+    .skill-tags span {
+      transition: none;
+    }
+  }
+</style>
