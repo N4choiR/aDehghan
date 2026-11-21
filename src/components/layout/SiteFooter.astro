@@ -1,0 +1,224 @@
+﻿---
+const currentYear = new Date().getFullYear();
+
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="brand" href="#home" aria-label="aDehghan home">
+        <span class="brand-mark">a<span>.</span></span>
+        <span class="brand-name">DEHGHAN</span>
+      </a>
+
+      <p class="footer-description">
+        Building ideas into digital experiences.
+        Always curious, always creating.
+      </p>
+    </div>
+
+    <div class="footer-navigation">
+      <span class="footer-heading">EXPLORE</span>
+      <nav aria-label="Footer navigation">
+        {links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+    </div>
+
+    <div class="footer-connect">
+      <span class="footer-heading">LET'S CONNECT</span>
+      <a href="mailto:hello@adehghan.ir">
+        Email <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://github.com/N4choiR" target="_blank" rel="noopener noreferrer">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://t.me/Nacho1R" target="_blank" rel="noopener noreferrer">
+        Telegram <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© {currentYear} aDehghan. All rights reserved.</span>
+    <span class="footer-made">Designed & built with curiosity <span aria-hidden="true">✳</span></span>
+    <a href="#home" class="back-to-top">
+      Back to top <span aria-hidden="true">↑</span>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    padding: 76px max(6%, calc((100% - 1240px) / 2)) 26px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    gap: 64px;
+    padding-bottom: 64px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -4px;
+  }
+
+  .brand-mark span {
+    color: var(--primary);
+  }
+
+  .brand-name {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+
+  .footer-description {
+    max-width: 310px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .footer-heading {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .footer-navigation nav,
+  .footer-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-navigation nav {
+    gap: 13px;
+  }
+
+  .footer-connect {
+    gap: 13px;
+  }
+
+  .footer-navigation a,
+  .footer-connect a {
+    color: var(--text);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-navigation a:hover,
+  .footer-connect a:hover {
+    color: var(--primary-light);
+  }
+
+  .footer-connect a span {
+    margin-left: 4px;
+    color: var(--primary);
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .footer-made span {
+    margin-left: 4px;
+    color: var(--primary);
+  }
+
+  .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .back-to-top:hover {
+    color: var(--primary-light);
+  }
+
+  .back-to-top span {
+    color: var(--primary);
+    font-size: 16px;
+  }
+
+  @media (max-width: 760px) {
+    .site-footer {
+      padding: 56px 6% 22px;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 42px 28px;
+      padding-bottom: 42px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .footer-main {
+      gap: 36px 18px;
+    }
+
+    .footer-navigation a,
+    .footer-connect a {
+      font-size: 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-navigation a,
+    .footer-connect a,
+    .back-to-top {
+      transition: none;
+    }
+  }
+</style>
