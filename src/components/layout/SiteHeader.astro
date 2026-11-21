@@ -2,6 +2,7 @@
 const links = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -19,6 +20,26 @@ const links = [
         <a class="nav-link" href={link.href}>{link.label}</a>
       ))}
     </nav>
+
+    <div class="header-controls">
+      <button
+        class="preference-button language-toggle"
+        type="button"
+        data-language-toggle
+        aria-label="Switch language to Persian"
+      >
+        FA
+      </button>
+
+      <button
+        class="preference-button theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-label="Switch to light theme"
+      >
+        ☼
+      </button>
+    </div>
 
     <a class="header-cta" href="mailto:hello@adehghan.ir">
       Let's talk <span aria-hidden="true">↗</span>
@@ -41,6 +62,10 @@ const links = [
       <a class="mobile-nav-link" href={link.href}>{link.label}</a>
     ))}
     <a class="mobile-nav-contact" href="mailto:hello@adehghan.ir">Let's talk ↗</a>
+    <div class="mobile-preferences">
+      <button class="preference-button" type="button" data-language-toggle aria-label="Switch language to Persian">FA</button>
+      <button class="preference-button" type="button" data-theme-toggle aria-label="Switch to light theme">☼</button>
+    </div>
   </nav>
 </header>
 
@@ -72,3 +97,4 @@ const links = [
     });
   }
 </script>
+
